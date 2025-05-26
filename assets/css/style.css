@@ -88,6 +88,16 @@ header .container {
 .logo h1 {
   color: var(--secondary-color);
   font-size: 1.8rem;
+  word-break: break-word; /* Add this for long words */
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .logo h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 10px;
+  }
 }
 
 .logo h1 span {

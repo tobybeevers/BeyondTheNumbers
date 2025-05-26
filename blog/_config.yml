@@ -29,7 +29,7 @@ permalink: /blog/:year/:title/ # the permalink structure for your blog posts, e.
 
 
 # Build settings
-theme: minima
+
 markdown: kramdown
 plugins:
   - jekyll-feed

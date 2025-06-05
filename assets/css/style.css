@@ -87,7 +87,7 @@ header .container {
 
 .logo h1 {
   color: var(--secondary-color);
-  font-size: 1.8rem;
+  font-size: 2.75rem;
   word-break: break-word; /* Add this for long words */
   max-width: 100%;
 }
@@ -120,7 +120,7 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../images/hero-bg.jpg');
+  background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../images/hero-bg.jpeg'); /*Free Licence from Shutter Stock*/
   background-size: cover;
   background-position: center;
   color: white;
@@ -181,6 +181,17 @@ nav ul li a {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: var(--secondary-color);
+}
+
+.service-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Testimonials */

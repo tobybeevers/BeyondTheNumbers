@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="logo">
-              <h1>BeyondTheNumbers<span>DataConsulting</span></h1>
+              <h1>Node9</h1>
             </div>
             <nav>
                 <ul>
@@ -37,7 +38,7 @@
             <div class="contact-grid">
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form action="mailto:toby.beevers@outlook.com" method="POST" enctype="text/plain">
+                    <form id="contact-form">
 
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -103,8 +104,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>BeyondTheNumbersDataConsulting</h4>
-                    <p>Helping businesses make data-driven decisions since 2023.</p>
+                    <h4>Node9 Consulting</h4>
+                    <p>Helping businesses make data-driven decisions since 2025.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -118,16 +119,37 @@
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="social-links">
-                      <a href="https://www.linkedin.com/in/tobybeevers/"target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://www.linkedin.com/company/node9-consulting"target="_blank"><i class="fab fa-linkedin"></i></a>
                       <a href="https://www.instagram.com/beyond_the_numbers_"target="_blank"><i class="fab fa-instagram"></i></a>
                       <a href="https://github.com/tobybeevers"target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 BeyondTheNumbersDataConsulting. All rights reserved.</p>
+                <p>&copy; 2025 Node9Consulting. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+
+<!-- Add EmailJS SDK and script just before </body> -->
+<!--Using email service at https://dashboard.emailjs.com/admin -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("eyN53i6RoxzC9CB_E"); // Replace with your EmailJS user ID
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_7g4leia', 'template_xabim3o', this)
+      .then(function() {
+        alert('Thanks For Connecting With Node9 Your Message sent successfully!');
+        document.getElementById('contact-form').reset();
+      }, function(error) {
+        alert('Failed to send message. Please try again.');
+      });
+  });
+</script>
 </body>
 </html>
